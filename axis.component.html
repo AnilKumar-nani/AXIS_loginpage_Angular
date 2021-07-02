@@ -1,0 +1,45 @@
+<div id="header">
+    <h2 style="color:white">AXIS BANK</h2>
+</div>
+
+ <div id="login-choice" style="display:flex;flex:row;flex:column;justify-content:center;margin-top:150px">
+     <ul style="list-style-type:none;">
+         <li><button id="id-login" class="option" (click)="login(1)">LoginID</button></li>
+         <li><button id= "card-login" class="option"  (click)="login(2)">DebitCard.No</button></li>
+         <li><button id="mpin-login" class="option" (click)="login(3)">mPIN</button></li>
+     </ul>
+ </div>
+ <div id="login" style="display:flex;flex:row;justify-content:center;">
+ <div id="login-LoginID" *ngIf="LoginID">
+ <input type="text" class="property" id="LoginID-id" placeholder="Login ID" style="outline : 0px;">
+ <br>
+ 
+ <input type="password" class="property" id="LoginID-password" placeholder="Password">
+ <br>
+ <button id="LoginID-login" >Login</button>
+ </div>
+
+ <div *ngIf="Debitcard">
+     <input class="property" id="Debitcard-id" type="number" placeholder="Card No" >
+     <br>
+     <input class="property" id="Debitcard-pin" type="password" placeholder="PIN No.">
+     <br>
+     <button id="Debitcard-login">Login</button>
+
+ </div>
+
+ <div *ngIf="mPIN">
+<label style="margin-bottom:20px; margin-left:100px;color:grey">select an option</label>
+<br><br>
+<input type="radio" name="123" style="margin-left:100px;font-size:15px ;color:grey" ><label style="color:grey">Customer ID</label>
+<input type="radio" name="123" style="margin-left:30px;font-size:15px;color:grey" /><label style="color:grey">Registered Mobile No.</label><br>
+<input id="mPIN-id" class="property" type="text" placeholder="Customer ID"/>
+<br>
+<input id="mPIN-pin" class="property" type="text" placeholder="mPIN"/>
+<br>
+<button id="mPIN-login">Login</button>
+
+
+</div>
+</div>
+
